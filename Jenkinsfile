@@ -9,11 +9,11 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                // Get some code from a GitHub repository
-                git 'https://github.com/michaelonye/demo-java.git'
+                
+                git 'https://github.com/michaelonye/onlinebookstore.git'
 
                 // Run Maven on a Unix agent.
-                sh "mvn clean package"
+                sh "mvn clean package -X"
 
                 // To run Maven on a Windows agent, use
                 // bat "mvn -Dmaven.test.failure.ignore=true clean package"
@@ -22,4 +22,6 @@ pipeline {
             
             }
         }
+}
+
  
