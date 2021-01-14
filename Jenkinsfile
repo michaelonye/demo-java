@@ -10,7 +10,7 @@ pipeline {
         stage('Build') {
             steps {
                 
-                git 'https://github.com/michaelonye/onlinebookstore.git'
+                git 'https://github.com/michaelonye/demo-java.git'
 
                 // Run Maven on a Unix agent.
                 sh "mvn clean package -X"
